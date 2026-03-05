@@ -1,24 +1,66 @@
 import { motion } from "framer-motion";
-
 const skillCategories = [
   {
     title: "Languages",
-    skills: ["C++", "Python", "Java", "JavaScript", "SQL", "HTML/CSS"],
+    skills: [
+      "C++",
+      "Python",
+      "Java",
+      "JavaScript",
+      "TypeScript",
+      "SQL",
+      "HTML",
+      "CSS",
+      "Bash",
+    ],
   },
   {
     title: "Frameworks & Libraries",
-    skills: ["Django", "Flask", "Vue.js", "Scikit-learn", "Pandas", "LangChain"],
+    skills: [
+      "Flask",
+      "Django",
+      "FastAPI",
+      "Vue.js",
+      "React",
+      "Scikit-learn",
+      "Pandas",
+      "NumPy",
+      "SciPy",
+      "Keras",
+      "LangChain",
+    ],
   },
   {
-    title: "Tools & Infra",
-    skills: ["Git", "PostgreSQL", "MySQL", "Redis", "Celery", "Docker"],
+    title: "Tools & Infrastructure",
+    skills: [
+      "Git",
+      "Docker",
+      "Kubernetes",
+      "Redis",
+      "Celery",
+      "PostgreSQL",
+      "MySQL",
+      "SQLite",
+      "MongoDB",
+      "Firebase",
+      "Linux",
+      "GitHub Actions",
+    ],
   },
   {
     title: "Concepts",
-    skills: ["DSA", "System Design", "REST APIs", "Machine Learning", "DBMS", "OS"],
+    skills: [
+      "Data Structures & Algorithms",
+      "Competitive Programming",
+      "Machine Learning",
+      "REST APIs",
+      "System Design",
+      "Database Systems",
+      "Operating Systems",
+      "Web Scraping",
+    ],
   },
 ];
-
 const SkillsSection = () => {
   return (
     <section id="skills" className="py-24 px-6 relative">
@@ -56,7 +98,7 @@ const SkillsSection = () => {
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.3, delay: i * 0.1 + j * 0.05 }}
+                    transition={{ duration: 0, delay: 0 }}
                     whileHover={{ scale: 1.05, backgroundColor: "hsl(155 100% 50% / 0.1)" }}
                     className="px-3 py-1.5 rounded-lg border border-border text-sm text-foreground font-mono cursor-default transition-colors"
                   >
