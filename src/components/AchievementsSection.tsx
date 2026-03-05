@@ -11,7 +11,7 @@ const achievements = [
   },
   {
     icon: Flame,
-    title: "Meta Hacker Cup 2025",
+    title: "Meta Hacker Cup 25 AIR 2",
     description: "All India Rank 2 · Global Rank 58 in Round 1",
     highlight: true,
     url: "https://www.facebook.com/codingcompetitions/hacker-cup",
@@ -25,10 +25,17 @@ const achievements = [
   },
   {
     icon: Award,
-    title: "IICPC at IIT Bombay",
-    description: "Secured Rank 100 in IICPC Regionals 24-25",
+    title: "IICPC Regionals 2025 & 2026",
+    description: "Secured Rank 100 in IICPC Regionals 24-25, Rank 93/13k+ Participants in IICPC Prelims 2026",
     highlight: false,
-    url: "https://icpc.global/",
+    url: "https://codefest.iicpc.com/",
+  },
+  {
+    icon: Medal,
+    title: "Won Prize at multiple CP Competitions",
+    description: "- IIT Madras, IIT Patna, IIIT Nagpur (2), IIIT Jabalpur, VJTI",
+    highlight: false,
+    url: "https://codefest.iicpc.com/",
   },
 ];
 
@@ -45,7 +52,7 @@ const AchievementsSection = () => {
         >
           <span className="font-mono text-sm text-primary mb-2 block">// achievements</span>
           <h2 className="text-3xl md:text-4xl font-bold">
-            Battle <span className="text-gradient">Honors</span>
+            Achieve<span className="text-gradient">ments</span>
           </h2>
         </motion.div>
 

@@ -4,16 +4,46 @@ import { ChevronDown } from "lucide-react";
 import FloatingGeometry from "./FloatingGeometry";
 
 const lines = [
-  { prefix: "const", text: ' developer = "Om Amar";', delay: 0 },
-  { prefix: "const", text: ' role = "Competitive Programmer & Developer";', delay: 0.8 },
-  { prefix: "const", text: " ratings = { codeforces: 2041, leetcode: 2496, codechef: 2282 };", delay: 1.6 },
-  { prefix: "const", text: ' achievement = "ICPC Asia West Finalist";', delay: 2.4 },
-  { prefix: "//", text: " Ready to build something extraordinary.", delay: 3.2 },
+  { prefix: "const", text: ' name = "Om Amar";', delay: 0 },
+  { prefix: "const", text: ' achievement = "ICPC Asia West Finalist";', delay: 0.8 },
+  {
+    prefix: "const",
+    text: [
+      { value: ' intern = "Upcoming Summer Intern @ ' },
+      { value: "G", className: "text-[#4285F4]" },
+      { value: "o", className: "text-[#EA4335]" },
+      { value: "o", className: "text-[#FBBC05]" },
+      { value: "g", className: "text-[#4285F4]" },
+      { value: "l", className: "text-[#34A853]" },
+      { value: "e", className: "text-[#EA4335]" },
+      { value: '";' }
+    ],
+    delay: 1.6
+  },
+  { prefix: "const", text: ' role = "Problem Solver ;)";', delay: 2.4 },
+  {
+    prefix: "const",
+    text: [
+      { value: " ratings = { cf: " },
+      { value: "2041", className: "text-purple-400" },
+      { value: ", lc: " },
+      { value: "2530", className: "text-red-500" },
+      { value: ", cc: " },
+      { value: "2282", className: "text-yellow-600" },
+      { value: " };" }
+    ],
+    delay: 3.2
+  },
+  { prefix: "//", text: " Ready to build something extraordinary.", delay: 4.0 },
 ];
 
-const TypingLine = ({ prefix, text, delay }: { prefix: string; text: string; delay: number }) => {
-  const [displayed, setDisplayed] = useState("");
+const TypingLine = ({ prefix, text, delay }) => {
+  const [displayed, setDisplayed] = useState(0);
   const [started, setStarted] = useState(false);
+
+  const segments = Array.isArray(text) ? text : [{ value: text }];
+
+  const full = segments.map(s => s.value).join("");
 
   useEffect(() => {
     const timer = setTimeout(() => setStarted(true), delay * 1000);
@@ -24,25 +54,44 @@ const TypingLine = ({ prefix, text, delay }: { prefix: string; text: string; del
     if (!started) return;
     let i = 0;
     const interval = setInterval(() => {
-      if (i <= text.length) {
-        setDisplayed(text.slice(0, i));
+      if (i <= full.length) {
+        setDisplayed(i);
         i++;
       } else {
         clearInterval(interval);
       }
     }, 30);
     return () => clearInterval(interval);
-  }, [started, text]);
+  }, [started]);
 
   if (!started) return null;
+
+  let remaining = displayed;
 
   const isComment = prefix === "//";
 
   return (
     <div className="font-mono text-sm md:text-base leading-relaxed">
-      <span className={isComment ? "text-muted-foreground/60 italic" : "text-accent"}>{prefix}</span>
-      <span className={isComment ? "text-muted-foreground/60 italic" : "text-foreground"}>{displayed}</span>
-      {displayed.length < text.length && (
+      <span className={isComment ? "text-[#6A9955]" : "text-accent"}>
+        {prefix}
+      </span>
+
+      {segments.map((seg, i) => {
+        const take = Math.min(seg.value.length, remaining);
+        remaining -= take;
+        if (take <= 0) return null;
+
+        return (
+          <span
+            key={i}
+            className={isComment ? "text-[#6A9955]" : (seg.className || "text-foreground")}
+          >
+            {seg.value.slice(0, take)}
+          </span>
+        );
+      })}
+
+      {displayed < full.length && (
         <span className="terminal-cursor text-primary">▎</span>
       )}
     </div>
@@ -84,9 +133,9 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20, filter: "blur(6px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           transition={{ duration: 0.8, delay: 0.7 }}
-          className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto"
+          className="text-lg md:text-xl text-muted-foreground mb-12 max-w-3xl mx-auto"
         >
-          Competitive Programmer · Full Stack Developer · Problem Solver
+          Competitive Programmer · Full Stack Developer · Problem Solver · Data Science
         </motion.p>
 
         {/* Terminal window */}

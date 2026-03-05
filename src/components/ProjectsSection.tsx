@@ -7,25 +7,39 @@ const projects = [
     title: "Household Services App",
     description: "Scalable platform connecting users with service providers. Built for IIT Madras MAD-II, secured S-grade.",
     tech: ["Python", "Flask", "VueJS", "SQLite", "Redis", "Celery"],
-    link: "#",
+    link: "https://github.com/OmAmar106/Household-Services-Application-23f2002152",
   },
   {
     title: "AI Data Analyst Agent",
     description: "LLM-powered agent for intelligent web scraping, data processing, and visualization from natural language prompts.",
     tech: ["Python", "LangChain", "Groq API", "Pandas", "Flask"],
-    link: "#",
+    link: "https://github.com/OmAmar106/AI-Data-Analyst-Agent",
   },
   {
     title: "Codeforces Rating Predictor",
     description: "ML model for predictive analytics with API-based data collection, feature engineering, plus a web app & browser extension.",
     tech: ["Scikit-learn", "Flask", "JavaScript"],
-    link: "#",
+    link: "https://github.com/OmAmar106/Codeforces-Rating-Predictor",
   },
   {
     title: "Report Card Generator",
     description: "Automated IIIT Nagpur's report card generation, currently used for 1000+ students.",
     tech: ["Python", "Pandas", "Openpyxl"],
-    link: "#",
+    link: "https://github.com/OmAmar106/Report-Card-Generation-Automation",
+  },
+  {
+    title: "NEXI – AI After-Sales Support Platform",
+    description:
+      "AI-enabled after-sales software for managing customer issues, service workflows and support automation.",
+    tech: ["Python", "Flask", "AI/LLM", "Web"],
+    link: "https://github.com/OmAmar106/NEXI-AI-Enabled-After-Sales-Software-SE-Project",
+  },
+  {
+    title: "Live Camera Safety AI Detection",
+    description:
+      "Real-time AI system that analyzes multiple live camera feeds to detect safety threats using computer vision and trigger alerts.",
+    tech: ["Python", "OpenCV", "Computer Vision", "AI", "RTSP"],
+    link: "https://github.com/OmAmar106/Live-Camera-Safety-AI-Detection",
   },
 ];
 
@@ -67,7 +81,9 @@ const ProjectsSection = () => {
                     {project.title}
                   </h3>
                   <div className="flex gap-2">
-                    <ExternalLink size={16} className="text-muted-foreground group-hover:text-primary transition-colors" />
+                    <a href={project.link} target="_blank">
+                      <ExternalLink size={16} className="text-muted-foreground group-hover:text-primary transition-colors" />
+                    </a>
                   </div>
                 </div>
                 <p className="text-sm text-muted-foreground mb-5 leading-relaxed">
@@ -88,6 +104,22 @@ const ProjectsSection = () => {
           ))}
         </div>
       </div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+        className="mt-12 text-center"
+      >
+        <a
+          href="https://github.com/OmAmar106?tab=repositories"
+          target="_blank"
+          className="inline-flex items-center gap-2 px-6 py-3 glass glass-hover rounded-lg font-mono text-sm"
+        >
+          <Github size={18} />
+          View More on GitHub
+        </a>
+      </motion.div>
     </section>
   );
 };

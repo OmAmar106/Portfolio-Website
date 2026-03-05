@@ -3,17 +3,6 @@ import { Briefcase, Users, Code } from "lucide-react";
 
 const experiences = [
   {
-    title: "Developer Intern",
-    company: "Multidimensions",
-    period: "Jul 2024 - Aug 2024",
-    location: "Remote",
-    icon: Briefcase,
-    description: [
-      "Built REST APIs with Django — auth, RBAC, and CRUD for e-commerce platform",
-      "Deployed production-ready web app with server config, env setup, and DB migrations",
-    ],
-  },
-  {
     title: "DSA Mentor",
     company: "TLE Eliminator",
     period: "Dec 2024 - Mar 2025",
@@ -25,16 +14,16 @@ const experiences = [
     ],
   },
   {
-    title: "Core Member — CP/DSA",
-    company: "Google Developers Group · IIIT Nagpur",
-    period: "Aug 2024 - Aug 2025",
-    icon: Code,
-    location: "IIIT Nagpur",
+    title: "Developer Intern",
+    company: "Multidimensions",
+    period: "Jul 2024 - Aug 2024",
+    location: "Remote",
+    icon: Briefcase,
     description: [
-      "Selected among 150+ peers by Google-selected leads",
-      "Conducted 25+ sessions and personally trained 15+ juniors in CP/DSA",
+      "Built REST APIs with Django — auth, RBAC, and CRUD for e-commerce platform",
+      "Deployed production-ready web app with server config, env setup, and DB migrations",
     ],
-  },
+  }
 ];
 
 const ExperienceSection = () => {

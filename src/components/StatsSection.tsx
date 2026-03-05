@@ -1,24 +1,23 @@
 import { useRef } from "react";
+import { useMotionValue, useSpring, useTransform } from "framer-motion";
+import { useState,useEffect } from "react";
 import { motion, useInView } from "framer-motion";
 import FloatingAccents from "./FloatingAccents";
-
 const stats = [
   {
     platform: "Codeforces",
     rating: "2041",
-    rank: "Candidate Master",
-    detail: "AIR 114 · 1500+ solved",
-    color: "text-primary",
-    glowClass: "glow-primary",
-    url: "https://codeforces.com/profile/OmAmar",
+    rank: "CM",
+    detail: "AIR <100 · 1500+ solved",
+    color: "text-purple-500",
+    url: "https://codeforces.com/profile/DeadMan69",
   },
   {
     platform: "LeetCode",
-    rating: "2496",
+    rating: "2530",
     rank: "Guardian",
-    detail: "Global #1536 · 1700+ solved",
-    color: "text-secondary",
-    glowClass: "glow-secondary",
+    detail: "Global #1383 · 1900+ solved",
+    color: "text-red-500",
     url: "https://leetcode.com/OmAmar/",
   },
   {
@@ -26,34 +25,41 @@ const stats = [
     rating: "2282",
     rank: "6 Star",
     detail: "AIR 69",
-    color: "text-accent",
-    glowClass: "",
-    url: "https://www.codechef.com/users/om_amar",
+    color: "text-amber-500",
+    url: "https://www.codechef.com/users/onedayi6star",
   },
   {
     platform: "AtCoder",
-    rating: "1200",
-    rank: "Rated",
-    detail: "Active Contestant",
-    color: "text-primary",
-    glowClass: "",
-    url: "https://atcoder.jp/users/OmAmar",
+    rating: "1721",
+    rank: "Blue",
+    detail: "World Rank 3298",
+    color: "text-blue-500",
+    url: "https://atcoder.jp/users/OmAmar106",
   },
 ];
 
 const AnimatedNumber = ({ value, inView }: { value: string; inView: boolean }) => {
   const num = parseInt(value);
-  
-  if (!inView) return <span className="font-mono text-5xl md:text-6xl font-bold">0</span>;
-  
+
+  const motionValue = useMotionValue(0);
+  const spring = useSpring(motionValue, { duration: 2000 });
+
+  const [display, setDisplay] = useState(0);
+
+  useEffect(() => {
+    const unsubscribe = spring.on("change", (latest) => {
+      setDisplay(Math.floor(latest));
+    });
+    return () => unsubscribe();
+  }, [spring]);
+
+  useEffect(() => {
+    if (inView) motionValue.set(num);
+  }, [inView, num, motionValue]);
+
   return (
-    <motion.span
-      className="font-mono text-5xl md:text-6xl font-bold"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-    >
-      {num.toLocaleString()}
+    <motion.span className="font-mono text-5xl md:text-6xl font-bold">
+      {display.toLocaleString()}
     </motion.span>
   );
 };
@@ -75,7 +81,7 @@ const StatsSection = () => {
         >
           <span className="font-mono text-sm text-primary mb-2 block">// competitive_programming</span>
           <h2 className="text-3xl md:text-4xl font-bold">
-            Rated on the <span className="text-gradient">World Stage</span>
+            Ratings <span className="text-gradient">Stats</span>
           </h2>
         </motion.div>
 
@@ -113,7 +119,10 @@ const StatsSection = () => {
               <div className="mt-3 h-1 rounded-full bg-muted overflow-hidden">
                 <motion.div
                   className={`h-full rounded-full ${
-                    i === 0 ? "bg-primary" : i === 1 ? "bg-secondary" : "bg-accent"
+                    i === 0 ? "bg-purple-500"
+                    : i === 1 ? "bg-red-500"
+                    : i === 2 ? "bg-amber-500"
+                    : "bg-blue-500"
                   }`}
                   initial={{ width: 0 }}
                   whileInView={{ width: `${(parseInt(stat.rating) / 3000) * 100}%` }}
@@ -135,7 +144,7 @@ const StatsSection = () => {
         >
           <div className="inline-flex items-center gap-4 glass rounded-xl px-8 py-4">
             <span className="text-muted-foreground font-mono text-sm">total_problems_solved</span>
-            <span className="text-gradient font-mono text-2xl font-bold">&gt; 3200+</span>
+            <span className="text-gradient font-mono text-2xl font-bold">&gt; 5000+</span>
           </div>
         </motion.div>
       </div>
