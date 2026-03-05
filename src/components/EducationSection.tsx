@@ -34,7 +34,7 @@ const education = [
     degree: "11-12th",
     institution: "APJ Nerul",
     shortName: "APJ Nerul",
-    period: "2021-23",
+    period: "2021 - 2023",
     location: "Mumbai, India",
     score: "12th Boards: 94.0%",
     highlights: [
@@ -44,7 +44,7 @@ const education = [
     degree: "10th",
     institution: "APJ Kharghar",
     shortName: "APJ Kharghar",
-    period: "2007-2021",
+    period: "2009 - 2021",
     location: "Mumbai, India",
     score: "10th Boards: 93.4%",
     highlights: [
