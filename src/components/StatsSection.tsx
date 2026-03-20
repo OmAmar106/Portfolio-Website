@@ -8,7 +8,7 @@ const stats = [
     platform: "Codeforces",
     rating: "2041",
     rank: "CM",
-    detail: "AIR <100 · 1500+ solved",
+    detail: "AIR <100 · 1600+ solved",
     color: "text-purple-500",
     url: "https://codeforces.com/profile/DeadMan69",
   },

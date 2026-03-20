@@ -4,8 +4,8 @@ import { Trophy, Medal, Award, Flame, ExternalLink } from "lucide-react";
 const achievements = [
   {
     icon: Trophy,
-    title: "ICPC Asia West Finals 2026",
-    description: "One of 51 teams representing India in ICPC Asia West Championship",
+    title: "ICPC Asia West Finalist 2026",
+    description: "Represented India at ICPC Asia West Championship",
     highlight: true,
     url: "https://icpc.global/",
   },
@@ -18,22 +18,22 @@ const achievements = [
   },
   {
     icon: Medal,
-    title: "ICPC Regionals 2025 & 2026",
+    title: "ICPC Regionalist 2025 & 2026",
     description: "Rank 24/100+ teams (Chennai) · Rank 43/300+ teams (Amritapuri)",
     highlight: false,
     url: "https://icpc.global/",
   },
   {
     icon: Award,
-    title: "IICPC Regionals 2025 & 2026",
+    title: "IICPC Regionalist 2025 & 2026",
     description: "Secured Rank 100 in IICPC Regionals 24-25, Rank 93/13k+ Participants in IICPC Prelims 2026",
     highlight: false,
     url: "https://codefest.iicpc.com/",
   },
   {
     icon: Medal,
-    title: "Won Prize at multiple CP Competitions",
-    description: "- IIT Madras, IIT Patna, IIIT Nagpur (2), IIIT Jabalpur, VJTI",
+    title: "Won at Multiple Offline National CP Competitions",
+    description: "- IIT Madras, IIT Patna, IIIT Nagpur (2), IIIT Jabalpur, VJTI, TCET · (Total 40k+ Rs. Won)",
     highlight: false,
     url: "https://codefest.iicpc.com/",
   },

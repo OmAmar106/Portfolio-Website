@@ -4,8 +4,8 @@ import { ChevronDown } from "lucide-react";
 import FloatingGeometry from "./FloatingGeometry";
 
 const lines = [
-  { prefix: "const", text: ' name = "Om Amar";', delay: 0 },
-  { prefix: "const", text: ' achievement = "ICPC Asia West Finalist";', delay: 0.8 },
+  { prefix: "const", text: ' name = "Om Amar";', delay: 0.8 },
+  { prefix: "const", text: ' achievement = "ICPC Asia West Finalist";', delay: 1.3 },
   {
     prefix: "const",
     text: [
@@ -18,9 +18,9 @@ const lines = [
       { value: "e", className: "text-[#EA4335]" },
       { value: '";' }
     ],
-    delay: 1.6
+    delay: 2.8
   },
-  { prefix: "const", text: ' role = "Problem Solver ;)";', delay: 2.4 },
+  { prefix: "const", text: ' role = "Problem Solver ;)";', delay: 4.3 },
   {
     prefix: "const",
     text: [
@@ -32,9 +32,9 @@ const lines = [
       { value: "2282", className: "text-yellow-600" },
       { value: " };" }
     ],
-    delay: 3.2
+    delay: 5.3
   },
-  { prefix: "//", text: " Ready to build something extraordinary.", delay: 4.0 },
+  { prefix: "//", text: " Ready to build something extraordinary.", delay: 6.8 },
 ];
 
 const TypingLine = ({ prefix, text, delay }) => {
