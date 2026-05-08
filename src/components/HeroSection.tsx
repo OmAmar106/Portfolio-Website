@@ -9,7 +9,7 @@ const lines = [
   {
     prefix: "const",
     text: [
-      { value: ' intern = "Upcoming Summer Intern @ ' },
+      { value: ' intern = "Summer Intern @ ' },
       { value: "G", className: "text-[#4285F4]" },
       { value: "o", className: "text-[#EA4335]" },
       { value: "o", className: "text-[#FBBC05]" },
