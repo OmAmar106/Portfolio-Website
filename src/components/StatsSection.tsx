@@ -14,9 +14,9 @@ const stats = [
   },
   {
     platform: "LeetCode",
-    rating: "2530",
+    rating: "2546",
     rank: "Guardian",
-    detail: "Global #1383 · 2000+ solved",
+    detail: "Global #1311 · 2000+ solved",
     color: "text-red-500",
     url: "https://leetcode.com/OmAmar/",
   },
@@ -30,9 +30,9 @@ const stats = [
   },
   {
     platform: "AtCoder",
-    rating: "1757",
+    rating: "1793",
     rank: "Blue",
-    detail: "World Rank 3000",
+    detail: "World Rank 2812",
     color: "text-blue-500",
     url: "https://atcoder.jp/users/OmAmar106",
   },
