@@ -31,12 +31,19 @@ const achievements = [
     url: "https://codefest.iicpc.com/",
   },
   {
+    icon: Award,
+    title: "AMS Derive Prior",
+    description: "Secured Rank 72 in AMS Derive Prior 26, Rank 72/2.5k+ Participants and qualified for AMS Derive Posterior",
+    highlight: false,
+    url: "https://amsderive.in/",
+  },
+  {
     icon: Medal,
     title: "Won at Multiple Offline National CP Competitions",
     description: "- IIT Madras, IIT Patna, IIIT Nagpur (2), IIIT Jabalpur, VJTI, TCET · (Total 40k+ Rs. Won)",
     highlight: false,
-    url: "https://codefest.iicpc.com/",
-  },
+    url: "",
+  }
 ];
 
 const AchievementsSection = () => {
