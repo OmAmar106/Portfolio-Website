@@ -27,7 +27,7 @@ const lines = [
       { value: " ratings = { cf: " },
       { value: "2041", className: "text-purple-400" },
       { value: ", lc: " },
-      { value: "2530", className: "text-red-500" },
+      { value: "2546", className: "text-red-500" },
       { value: ", cc: " },
       { value: "2282", className: "text-yellow-600" },
       { value: " };" }
