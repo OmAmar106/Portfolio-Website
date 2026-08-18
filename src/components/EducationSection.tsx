@@ -8,7 +8,7 @@ const education = [
     shortName: "IIIT Nagpur",
     period: "2023 - Present",
     location: "Nagpur, India",
-    score: "CGPA: 9.09",
+    score: "CGPA: 9.08",
     courses: "Data Structures & Algorithms, Operating Systems, DBMS, Computer Networks, Machine Learning, OOPS",
     highlights: [
       "Core Member — Coding Club (Dotslash) & Google Developers Group on Campus",
@@ -22,7 +22,7 @@ const education = [
     shortName: "IIT Madras",
     period: "2023 - Present",
     location: "Remote",
-    score: "CGPA: 8.74",
+    score: "CGPA: 8.79",
     courses: "Probability, Statistics, Linear Algebra, Web Development, Software Engineering, Software Testing, Tools for Data Science, Business Data Management, Business Analytics, DBMS, AI, Machine Learning, Deep Learning",
     highlights: [
       "Advanced coursework in ML and statistics",

@@ -32,8 +32,8 @@ const achievements = [
   },
   {
     icon: Award,
-    title: "AMS Derive Prior",
-    description: "Secured Rank 72 in AMS Derive Prior 26, Rank 72/2.5k+ Participants and qualified for AMS Derive Posterior",
+    title: "AMS Derive '26 Finalist",
+    description: "Secured Rank 11 in AMS Derive Finals '26 at IIT Bombay",
     highlight: false,
     url: "https://amsderive.in/",
   },

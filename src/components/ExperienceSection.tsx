@@ -3,6 +3,19 @@ import { Briefcase, Users, Code } from "lucide-react";
 
 const experiences = [
   {
+    title: "WSE Intern",
+    company: "Google",
+    period: "May 2026 - Aug 2026",
+    icon: Code,
+    location: "Hyderabad, India",
+    description: [
+      "Built production AI-agent backend infrastructure with asynchronous Cloud Spanner logging, gRPC/RPC services, and reusable SDK components",
+      "Developed an LLM playback framework for prompt/config modification, inference replay, output comparison, and debugging dashboards",
+      "Optimized request scheduling to eliminate LLM QPS bottlenecks and validated the system under 1,000 concurrent users",
+      "Integrated MCP, sandboxed Python execution, internal search, credential forwarding, and long-running multi-turn agent workflows",
+    ],
+  },
+  {
     title: "DSA Mentor",
     company: "TLE Eliminator",
     period: "Dec 2024 - Mar 2025",
